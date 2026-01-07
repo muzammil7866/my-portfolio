@@ -148,7 +148,7 @@ export default function ContactPage() {
                                 <Input
                                     id="email"
                                     type="email"
-                                    placeholder="john@example.com"
+                                    placeholder="john@gmail.com"
                                     value={formData.email}
                                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                                     required
