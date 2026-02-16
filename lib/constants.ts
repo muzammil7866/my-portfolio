@@ -1,52 +1,60 @@
 export const SKILLS = [
     "Python",
-    "PyTorch",
-    "TensorFlow",
+    "SQL",
+    "C++",
     "FastAPI",
-    "React",
-    "Next.js",
-    "Docker",
-    "PostgreSQL",
-    "MongoDB",
+    "Flask",
     "LangChain",
+    "TensorFlow",
+    "PyTorch",
+    "Scikit-learn",
     "OpenAI API",
+    "Hugging Face",
+    "RAG",
     "AWS",
+    "Docker",
+    "GitHub Actions",
+    "MLflow",
+    "Apache Airflow",
+    "Celery",
+    "Redis",
 ];
 
 export const PROJECTS = [
     {
-        title: "RAG-based QA System",
+        title: "Suspicious Behavior Detection System",
         description:
-            "A sophisticated Question Answering system building using LangChain and OpenAI. It ingests PDF documents, creates embeddings, and provides accurate answers with source citations.",
-        tags: ["Python", "LangChain", "OpenAI", "Pinecone"],
-        githubUrl: "https://github.com",
-        demoUrl: "/demo",
-        image: "https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?q=80&w=600&auto=format&fit=crop",
+            "Real-time surveillance system utilizing 3D ResNet-18 and Multiple Instance Learning (MIL) to detect anomalies in the UCF-Crime dataset with SOTA temporal localization accuracy.",
+        tags: ["Python", "PyTorch", "3D CNNs", "MIL", "Computer Vision"],
+        githubUrl: "https://github.com/muzammil7866",
+        demoUrl: "#", // No live demo URL provided
+        image: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=600&auto=format&fit=crop", // Cyber/Security placeholder
     },
     {
-        title: "ML Model Deployment",
+        title: "End-to-End MLOps Pipeline",
         description:
-            "End-to-end deployment of a Computer Vision model using FastAPI and Docker. Optimizes inference time and provides a RESTful API for consumption.",
-        tags: ["Python", "FastAPI", "Docker", "PyTorch"],
-        githubUrl: "https://github.com",
-        demoUrl: "https://example.com",
-        image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=600&auto=format&fit=crop",
+            "Automated ML lifecycle platform using DVC for data versioning, MLflow for tracking, and GitHub Actions for CI/CD. Orchestrates ETL DAGs with Airflow and deploys FastAPI services on AWS EC2.",
+        tags: ["AWS", "Airflow", "FastAPI", "Docker", "MLflow", "DVC"],
+        githubUrl: "https://github.com/muzammil7866",
+        demoUrl: "#",
+        image: "https://images.unsplash.com/photo-1667372393119-c81c0cda0a29?q=80&w=600&auto=format&fit=crop", // Cloud/DevOps placeholder
     },
     {
-        title: "Recommendation Engine",
+        title: "Context-Aware Multimodal Recommender",
         description:
-            "Collaborative filtering recommendation system for e-commerce products. Built with Scikit-learn and deployed on AWS Lambda.",
-        tags: ["Python", "Scikit-learn", "AWS", "Serverless"],
-        githubUrl: "https://github.com",
-        image: "https://images.unsplash.com/photo-1518932945647-7a1c969f8be2?q=80&w=600&auto=format&fit=crop",
+            "Hybrid RAG engine fusing user preferences with live OpenWeatherMap API data using FAISS vector search. Fine-tuned transformer models serve dynamic lifestyle recommendations.",
+        tags: ["Python", "RAG", "FAISS", "Transformers", "OpenAI"],
+        githubUrl: "https://github.com/muzammil7866",
+        demoUrl: "#",
+        image: "https://images.unsplash.com/photo-1518932945647-7a1c969f8be2?q=80&w=600&auto=format&fit=crop", // AI placeholder
     },
     {
-        title: "Portfolio Website",
+        title: "Multimodal Cancer Diagnostic System",
         description:
-            "Modern, responsive portfolio website built with Next.js 14 and Tailwind CSS. Features dark mode, clean typography, and SEO optimization.",
-        tags: ["TypeScript", "Next.js", "Tailwind CSS", "Framer Motion"],
-        githubUrl: "https://github.com",
-        demoUrl: "/",
-        image: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=600&auto=format&fit=crop",
+            "Fusion framework classifying cancer types using SHAP and LIME for interpretability. Implements cross-modal attention mechanisms to correlate unstructured medical text with genomic sequences.",
+        tags: ["Python", "XAI", "SHAP", "LIME", "Medical AI"],
+        githubUrl: "https://github.com/muzammil7866",
+        demoUrl: "#",
+        image: "https://images.unsplash.com/photo-1576086213369-97a306d36557?q=80&w=600&auto=format&fit=crop", // Medical placeholder
     },
 ];

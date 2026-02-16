@@ -21,7 +21,7 @@ export function HeroSection() {
                     >
                         <div className="inline-flex items-center px-3 py-1 mb-6 text-sm font-medium text-primary bg-primary/10 rounded-full border border-primary/20 backdrop-blur-sm">
                             <Terminal className="w-4 h-4 mr-2" />
-                            AI Engineer | Gen AI | NLP | RAG Systems
+                            AI Engineer | GenAI | MLOps | RAG
                         </div>
 
                         <h1 className="text-4xl font-extrabold tracking-tight sm:text-6xl mb-6 bg-clip-text text-transparent bg-gradient-to-r from-foreground to-foreground/70">
@@ -30,7 +30,7 @@ export function HeroSection() {
                         </h1>
 
                         <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
-                            I am a <strong>4× Gold Medalist</strong> and AI Engineer with 3+ years of experience specializing in designing intelligent systems, from LLMs to Recommender Systems. I automate pipelines and enable data-powered decision-making.
+                            I bridge the gap between academic research and production-grade software. As a <strong>Founding AI Engineer</strong> and <strong>Top-Ranked Student (4× Gold Medalist)</strong>, I architect scalable systems that handle real-time inference, moving beyond static notebooks to deliver production-ready AI.
                         </p>
 
                         <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
