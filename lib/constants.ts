@@ -1,24 +1,32 @@
-export const SKILLS = [
-    "Python",
-    "SQL",
-    "C++",
-    "FastAPI",
-    "Flask",
-    "LangChain",
-    "TensorFlow",
-    "PyTorch",
-    "Scikit-learn",
-    "OpenAI API",
-    "Hugging Face",
-    "RAG",
-    "AWS",
-    "Docker",
-    "GitHub Actions",
-    "MLflow",
-    "Apache Airflow",
-    "Celery",
-    "Redis",
-];
+export const SKILLS = {
+    "Languages": [
+        "Python",
+        "C++",
+        "SQL",
+    ],
+    "AI & Frameworks": [
+        "PyTorch",
+        "TensorFlow",
+        "LangChain",
+        "Hugging Face",
+        "OpenAI API",
+        "RAG",
+    ],
+    "MLOps & Tools": [
+        "MLflow",
+        "Apache Airflow",
+        "DVC",
+        "Docker",
+        "GitHub Actions",
+    ],
+    "Backend & Cloud": [
+        "FastAPI",
+        "Flask",
+        "AWS",
+        "Redis",
+        "Celery",
+    ],
+};
 
 export const PROJECTS = [
     {
