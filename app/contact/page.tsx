@@ -3,7 +3,7 @@
 import { SectionHeader } from "@/components/SectionHeader";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { Github, Linkedin, Mail, Phone, MapPin } from "lucide-react";
+import { Github, Linkedin, Mail, MapPin } from "lucide-react";
 import Link from "next/link";
 import { Card, CardContent } from "@/components/ui/card";
 import { useState } from "react";
@@ -51,7 +51,7 @@ export default function ContactPage() {
         <div className="container px-4 mx-auto py-16">
             <SectionHeader
                 title="Get In Touch"
-                subtitle="Have a project in mind or want to discuss AI? I'd love to hear from you."
+                subtitle="Have a project in mind or want to discuss AI? I'd be delighted to hear from you."
                 align="center"
                 className="mb-12"
             />
@@ -63,7 +63,7 @@ export default function ContactPage() {
                         <h3>Let&apos;s talk.</h3>
                         <p className="text-muted-foreground">
                             I&apos;m currently open to new opportunities and interesting projects.
-                            Whether you need help with an ML pipeline, a full-stack MVP, or just want to say hi, feel free to reach out.
+                            Whether you need help with an ML pipeline, a full-stack MVP, or have a viable opportunity, feel free to reach out.
                         </p>
                     </div>
 
@@ -79,15 +79,6 @@ export default function ContactPage() {
                         </Card>
                         <Card>
                             <CardContent className="flex items-center gap-4 p-6">
-                                <Phone className="h-6 w-6 text-primary" />
-                                <div>
-                                    <p className="font-medium">Phone</p>
-                                    <a href="tel:+923004848190" className="text-muted-foreground hover:text-primary transition-colors">+92 300 484 8190</a>
-                                </div>
-                            </CardContent>
-                        </Card>
-                        <Card>
-                            <CardContent className="flex items-center gap-4 p-6">
                                 <Linkedin className="h-6 w-6 text-primary" />
                                 <div>
                                     <p className="font-medium">LinkedIn</p>
@@ -95,7 +86,7 @@ export default function ContactPage() {
                                 </div>
                             </CardContent>
                         </Card>
-                        <Card>
+                        <Card className="md:col-span-2">
                             <CardContent className="flex items-center gap-4 p-6">
                                 <MapPin className="h-6 w-6 text-primary" />
                                 <div>
@@ -110,10 +101,6 @@ export default function ContactPage() {
                         <p className="font-medium mb-4">Connect on Socials</p>
                         <div className="flex flex-wrap justify-center gap-6 text-muted-foreground">
                             <Link href="https://github.com/muzammil7866" target="_blank" className="hover:text-primary transition-colors flex items-center gap-2"><Github className="w-4 h-4" /> GitHub</Link>
-                            <Link href="https://wa.me/923004848190" target="_blank" className="hover:text-primary transition-colors flex items-center gap-2">WhatsApp</Link>
-                            <Link href="https://www.instagram.com/muzammilsohail6/" target="_blank" className="hover:text-primary transition-colors flex items-center gap-2">Instagram</Link>
-                            <Link href="https://www.tiktok.com/@muzammil.sohail39" target="_blank" className="hover:text-primary transition-colors flex items-center gap-2">TikTok</Link>
-                            <Link href="https://www.youtube.com/@muzammilbinsohail" target="_blank" className="hover:text-primary transition-colors flex items-center gap-2">YouTube</Link>
                             <Link href="https://linktr.ee/muzammilsohail" target="_blank" className="hover:text-primary transition-colors flex items-center gap-2">Linktree</Link>
                         </div>
                     </div>

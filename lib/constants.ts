@@ -37,7 +37,7 @@ export const PROJECTS = [
         tags: ["AWS", "Airflow", "FastAPI", "Docker", "MLflow", "DVC"],
         githubUrl: "https://github.com/muzammil7866",
         demoUrl: "#",
-        image: "https://images.unsplash.com/photo-1667372393119-c81c0cda0a29?q=80&w=600&auto=format&fit=crop", // Cloud/DevOps placeholder
+        image: "https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?q=80&w=600&auto=format&fit=crop", // Code/Tech placeholder
     },
     {
         title: "Context-Aware Multimodal Recommender",

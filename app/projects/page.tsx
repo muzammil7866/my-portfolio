@@ -7,7 +7,7 @@ export default function ProjectsPage() {
         <div className="container px-4 mx-auto py-16">
             <SectionHeader
                 title="All Projects"
-                subtitle="A complete list of my technical projects, featuring AI models, full-stack apps, and data systems."
+                subtitle="A diverse list of my technical projects, featuring AI models, full-stack apps, and data systems."
                 align="center"
                 className="mb-16"
             />
