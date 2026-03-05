@@ -1,16 +1,16 @@
+"use client";
+
 import { HeroSection } from "@/components/HeroSection";
 import { SkillsSection } from "@/components/SkillsSection";
-import { ProjectCard } from "@/components/ProjectCard";
+import { ProjectSlider } from "@/components/ProjectSlider";
 import { SectionHeader } from "@/components/SectionHeader";
 import { PROJECTS } from "@/lib/constants";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
+import { motion } from "framer-motion";
 
 export default function Home() {
-  // Show only first 3 projects as featured
-  const featuredProjects = PROJECTS.slice(0, 3);
-
   return (
     <div className="flex flex-col min-h-screen">
       <HeroSection />
@@ -18,7 +18,13 @@ export default function Home() {
       <SkillsSection />
 
       <section className="py-24 container px-4 mx-auto">
-        <div className="flex justify-between items-end mb-12">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          className="flex justify-between items-end mb-12"
+        >
           <SectionHeader
             title="Featured Projects"
             subtitle="A selection of my recent work in AI and Software Engineering."
@@ -29,13 +35,9 @@ export default function Home() {
               View All <ArrowRight className="ml-2 h-4 w-4" />
             </Link>
           </Button>
-        </div>
+        </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {featuredProjects.map((project) => (
-            <ProjectCard key={project.title} project={project} />
-          ))}
-        </div>
+        <ProjectSlider projects={PROJECTS} itemsPerSlide={3} />
 
         <div className="mt-12 text-center sm:hidden">
           <Button variant="outline" asChild>
@@ -48,13 +50,26 @@ export default function Home() {
 
       <section className="py-24 bg-secondary/30">
         <div className="container px-4 mx-auto text-center">
-          <h2 className="text-3xl font-bold mb-6">Let&apos;s Build Something Together</h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto mb-8 text-lg">
-            I&apos;m always looking for new challenges and opportunities to apply AI to real-world problems.
-          </p>
-          <Button size="lg" asChild>
-            <Link href="/contact">Get In Touch</Link>
-          </Button>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="space-y-6"
+          >
+            <h2 className="text-3xl font-bold mb-6">Let&apos;s Build Something Together</h2>
+            <p className="text-muted-foreground max-w-2xl mx-auto mb-8 text-lg">
+              I&apos;m always looking for new challenges and opportunities to apply AI to real-world problems.
+            </p>
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              <Button size="lg" asChild>
+                <Link href="/contact">Get In Touch</Link>
+              </Button>
+            </motion.div>
+          </motion.div>
         </div>
       </section>
     </div>

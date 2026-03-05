@@ -28,6 +28,22 @@ export const SKILLS = {
     ],
 };
 
+// Skill proficiency levels for animated sliders
+export const SKILL_PROFICIENCY = {
+    "Python": 95,
+    "PyTorch": 92,
+    "FastAPI": 90,
+    "AWS": 88,
+    "Docker": 87,
+    "LangChain": 85,
+    "TensorFlow": 85,
+    "SQL": 80,
+    "Airflow": 80,
+    "Flask": 78,
+    "C++": 75,
+    "Redis": 72,
+};
+
 export const PROJECTS = [
     {
         title: "Suspicious Behavior Detection System",

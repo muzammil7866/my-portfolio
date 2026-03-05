@@ -3,14 +3,21 @@
 import { SectionHeader } from "@/components/SectionHeader";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
+import { AnimatedStat } from "@/components/AnimatedStats";
 import Link from "next/link";
-import { Calendar, MapPin, Building2, GraduationCap, Trophy, Award } from "lucide-react";
+import { Calendar, MapPin, Building2, GraduationCap, Trophy, Award, ExternalLink } from "lucide-react";
+import { motion } from "framer-motion";
 
 export default function AboutPage() {
     return (
         <div className="container px-4 mx-auto py-16 space-y-24">
             {/* Introduction Section */}
-            <div>
+            <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+            >
                 <SectionHeader
                     title="About Me"
                     subtitle="Founding AI Engineer | Top-Ranked AI Student"
@@ -19,7 +26,13 @@ export default function AboutPage() {
                 />
 
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-                    <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
+                    <motion.div
+                        initial={{ opacity: 0, x: -20 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.6, delay: 0.1 }}
+                        viewport={{ once: true }}
+                        className="space-y-6 text-lg text-muted-foreground leading-relaxed"
+                    >
                         <p>
                             I bridge the gap between academic research and production-grade software. Currently completing my BS in AI as the <strong>Top-Ranked Student (Rank 1/Cohort, 4x Gold Medalist)</strong>, I simultaneously serve as the Founding AI Engineer at Entracloud.
                         </p>
@@ -30,47 +43,54 @@ export default function AboutPage() {
                             I have spent the last few years moving beyond "making it work" to "making it scale." As I approach graduation (2026), I am looking for a challenging AI Engineering role where I can solve complex problems and ship code that matters.
                         </p>
 
-                        <div className="p-6 bg-primary/5 rounded-2xl border border-primary/10 mt-8">
+                        <motion.div
+                            initial={{ opacity: 0, y: 10 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.5, delay: 0.2 }}
+                            viewport={{ once: true }}
+                            className="p-6 bg-primary/5 rounded-2xl border border-primary/10 mt-8"
+                        >
                             <h3 className="text-xl font-bold text-foreground mb-2">My Mission</h3>
                             <p className="italic">
                                 "To build scalable, production-ready AI systems that solve real-world problems, ensuring that intelligence is not just theoretical but impactful."
                             </p>
-                        </div>
-                    </div>
+                        </motion.div>
+                    </motion.div>
 
-                    <div className="space-y-8">
+                    <motion.div
+                        initial={{ opacity: 0, x: 20 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.6, delay: 0.1 }}
+                        viewport={{ once: true }}
+                        className="space-y-8"
+                    >
                         <div className="grid grid-cols-2 gap-4">
-                            <div className="p-4 rounded-xl bg-secondary/50 text-center">
-                                <Trophy className="w-8 h-8 text-primary mx-auto mb-2" />
-                                <div className="text-3xl font-bold text-primary mb-1">4x</div>
-                                <div className="text-sm text-muted-foreground">Gold Medals</div>
-                            </div>
-                            <div className="p-4 rounded-xl bg-secondary/50 text-center">
-                                <Award className="w-8 h-8 text-primary mx-auto mb-2" />
-                                <div className="text-3xl font-bold text-primary mb-1">1st</div>
-                                <div className="text-sm text-muted-foreground">Rank in Cohort</div>
-                            </div>
-                            <div className="p-4 rounded-xl bg-secondary/50 text-center">
-                                <div className="text-3xl font-bold text-primary mb-1">200+</div>
-                                <div className="text-sm text-muted-foreground">AI Solutions Delivered</div>
-                            </div>
-                            <div className="p-4 rounded-xl bg-secondary/50 text-center">
-                                <div className="text-3xl font-bold text-primary mb-1">40%</div>
-                                <div className="text-sm text-muted-foreground">Latency Reduction</div>
-                            </div>
+                            <AnimatedStat value={4} suffix="x" label="Gold Medals" />
+                            <AnimatedStat value={1} label="Rank in Cohort" />
+                            <AnimatedStat value={200} suffix="+" label="AI Solutions Delivered" />
+                            <AnimatedStat value={40} suffix="%" label="Latency Reduction" />
                         </div>
 
-                        <div className="pt-4 flex justify-center">
+                        <motion.div
+                            whileHover={{ scale: 1.05 }}
+                            whileTap={{ scale: 0.95 }}
+                            className="pt-4 flex justify-center"
+                        >
                             <Button asChild size="lg" className="rounded-full w-full">
                                 <Link href="/contact">Let&apos;s Innovate Together</Link>
                             </Button>
-                        </div>
-                    </div>
+                        </motion.div>
+                    </motion.div>
                 </div>
-            </div>
+            </motion.div>
 
             {/* Experience Section */}
-            <section>
+            <motion.section
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+            >
                 <SectionHeader
                     title="Experience"
                     subtitle="My professional journey in the AI industry."
@@ -78,7 +98,13 @@ export default function AboutPage() {
                 />
                 <div className="grid gap-6">
                     {/* Experience Item 1 */}
-                    <Card>
+                    <motion.div
+                        initial={{ opacity: 0, x: -20 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.5, delay: 0 }}
+                        viewport={{ once: true }}
+                    >
+                        <Card>
                         <CardHeader>
                             <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
                                 <div>
@@ -101,8 +127,15 @@ export default function AboutPage() {
                             </ul>
                         </CardContent>
                     </Card>
+                    </motion.div>
 
                     {/* Experience Item 2 */}
+                    <motion.div
+                        initial={{ opacity: 0, x: -20 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.5, delay: 0.1 }}
+                        viewport={{ once: true }}
+                    >
                     <Card>
                         <CardHeader>
                             <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
@@ -125,8 +158,15 @@ export default function AboutPage() {
                             </ul>
                         </CardContent>
                     </Card>
+                    </motion.div>
 
                     {/* Experience Item 3 */}
+                    <motion.div
+                        initial={{ opacity: 0, x: -20 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.5, delay: 0.2 }}
+                        viewport={{ once: true }}
+                    >
                     <Card>
                         <CardHeader>
                             <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
@@ -149,8 +189,15 @@ export default function AboutPage() {
                             </ul>
                         </CardContent>
                     </Card>
+                    </motion.div>
 
                     {/* Experience Item 4 */}
+                    <motion.div
+                        initial={{ opacity: 0, x: -20 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.5, delay: 0.3 }}
+                        viewport={{ once: true }}
+                    >
                     <Card>
                         <CardHeader>
                             <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
@@ -174,11 +221,18 @@ export default function AboutPage() {
                             </ul>
                         </CardContent>
                     </Card>
+                    </motion.div>
                 </div>
-            </section>
+            </motion.section>
 
             {/* Education & Achievements Grid */}
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+                className="grid grid-cols-1 lg:grid-cols-2 gap-12"
+            >
                 {/* Education */}
                 <section>
                     <SectionHeader title="Education" subtitle="Academic background." className="mb-8" />
@@ -238,7 +292,175 @@ export default function AboutPage() {
                         </CardContent>
                     </Card>
                 </section>
-            </div>
+            </motion.div>
+
+            {/* Certifications Section */}
+            <motion.section
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+            >
+                <SectionHeader 
+                    title="Certifications" 
+                    subtitle="Core AI and infrastructure credentials, focused on production-grade engineering."
+                    className="mb-12" 
+                />
+                <div className="grid gap-6">
+                    {/* Certification 1 - GenAI - How LLMs Work */}
+                    <motion.div
+                        initial={{ opacity: 0, x: -20 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.5, delay: 0 }}
+                        viewport={{ once: true }}
+                    >
+                    <Card>
+                        <CardHeader>
+                            <div className="flex flex-col md:flex-row md:items-start justify-between gap-4">
+                                <div className="flex-1">
+                                    <CardTitle className="text-lg">GenAI - How LLMs Work</CardTitle>
+                                    <CardDescription className="text-base text-primary mt-2">
+                                        Duke University
+                                    </CardDescription>
+                                </div>
+                                <div className="text-sm text-muted-foreground flex items-center gap-1 whitespace-nowrap">
+                                    <Calendar className="w-4 h-4" /> Dec 2024
+                                </div>
+                            </div>
+                        </CardHeader>
+                        <CardContent className="space-y-3">
+                            <p className="text-sm text-muted-foreground">
+                                <strong>Credential ID:</strong> Q92AMX8SBD1Z
+                            </p>
+                            <p className="text-sm text-muted-foreground">
+                                <strong>Skills:</strong> Generative AI · Large Language Models
+                            </p>
+                            <Link 
+                                href="#" 
+                                className="inline-flex items-center gap-2 text-sm text-primary hover:underline"
+                                title="Add credential URL"
+                            >
+                                View credential <ExternalLink className="w-4 h-4" />
+                            </Link>
+                        </CardContent>
+                    </Card>
+                    </motion.div>
+
+                    {/* Certification 2 - Prompt Engineering */}
+                    <motion.div
+                        initial={{ opacity: 0, x: -20 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.5, delay: 0.1 }}
+                        viewport={{ once: true }}
+                    >
+                    <Card>
+                        <CardHeader>
+                            <div className="flex flex-col md:flex-row md:items-start justify-between gap-4">
+                                <div className="flex-1">
+                                    <CardTitle className="text-lg">Prompt Engineering</CardTitle>
+                                    <CardDescription className="text-base text-primary mt-2">
+                                        freeCodeCamp
+                                    </CardDescription>
+                                </div>
+                                <div className="text-sm text-muted-foreground flex items-center gap-1 whitespace-nowrap">
+                                    <Calendar className="w-4 h-4" /> Apr 2024
+                                </div>
+                            </div>
+                        </CardHeader>
+                        <CardContent className="space-y-3">
+                            <p className="text-sm text-muted-foreground">
+                                <strong>Skills:</strong> Artificial Intelligence (AI) · Large Language Models (LLM) · Prompt Engineering
+                            </p>
+                            <Link 
+                                href="#" 
+                                className="inline-flex items-center gap-2 text-sm text-primary hover:underline"
+                                title="Add credential URL"
+                            >
+                                View credential <ExternalLink className="w-4 h-4" />
+                            </Link>
+                        </CardContent>
+                    </Card>
+                    </motion.div>
+
+                    {/* Certification 3 - Creating Web App with Python and Flask */}
+                    <motion.div
+                        initial={{ opacity: 0, x: -20 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.5, delay: 0.2 }}
+                        viewport={{ once: true }}
+                    >
+                    <Card>
+                        <CardHeader>
+                            <div className="flex flex-col md:flex-row md:items-start justify-between gap-4">
+                                <div className="flex-1">
+                                    <CardTitle className="text-lg">Creating Web App with Python and Flask</CardTitle>
+                                    <CardDescription className="text-base text-primary mt-2">
+                                        Coursera
+                                    </CardDescription>
+                                </div>
+                                <div className="text-sm text-muted-foreground flex items-center gap-1 whitespace-nowrap">
+                                    <Calendar className="w-4 h-4" /> Aug 2023
+                                </div>
+                            </div>
+                        </CardHeader>
+                        <CardContent className="space-y-3">
+                            <p className="text-sm text-muted-foreground">
+                                <strong>Credential ID:</strong> FDVK5863MFK8
+                            </p>
+                            <p className="text-sm text-muted-foreground">
+                                <strong>Skills:</strong> Flask · Web Development · REST APIs · Python · Back-End Web Development
+                            </p>
+                            <Link 
+                                href="#" 
+                                className="inline-flex items-center gap-2 text-sm text-primary hover:underline"
+                                title="Add credential URL"
+                            >
+                                View credential <ExternalLink className="w-4 h-4" />
+                            </Link>
+                        </CardContent>
+                    </Card>
+                    </motion.div>
+
+                    {/* Certification 4 - Relational Database and SQL */}
+                    <motion.div
+                        initial={{ opacity: 0, x: -20 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.5, delay: 0.3 }}
+                        viewport={{ once: true }}
+                    >
+                    <Card>
+                        <CardHeader>
+                            <div className="flex flex-col md:flex-row md:items-start justify-between gap-4">
+                                <div className="flex-1">
+                                    <CardTitle className="text-lg">Relational Database and SQL</CardTitle>
+                                    <CardDescription className="text-base text-primary mt-2">
+                                        Coursera
+                                    </CardDescription>
+                                </div>
+                                <div className="text-sm text-muted-foreground flex items-center gap-1 whitespace-nowrap">
+                                    <Calendar className="w-4 h-4" /> Aug 2023
+                                </div>
+                            </div>
+                        </CardHeader>
+                        <CardContent className="space-y-3">
+                            <p className="text-sm text-muted-foreground">
+                                <strong>Credential ID:</strong> USXDWYK8CD5L
+                            </p>
+                            <p className="text-sm text-muted-foreground">
+                                <strong>Skills:</strong> SQL · Relational Databases · Data Modeling · Database Design
+                            </p>
+                            <Link 
+                                href="#" 
+                                className="inline-flex items-center gap-2 text-sm text-primary hover:underline"
+                                title="Add credential URL"
+                            >
+                                View credential <ExternalLink className="w-4 h-4" />
+                            </Link>
+                        </CardContent>
+                    </Card>
+                    </motion.div>
+                </div>
+            </motion.section>
         </div>
     );
 }
