@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { AnimatedStat } from "@/components/AnimatedStats";
 import Link from "next/link";
-import { Calendar, MapPin, Building2, GraduationCap, Trophy, Award, ExternalLink } from "lucide-react";
+import { Calendar, MapPin, Building2, GraduationCap, Trophy, Award } from "lucide-react";
 import { motion } from "framer-motion";
 
 export default function AboutPage() {
@@ -335,13 +335,6 @@ export default function AboutPage() {
                             <p className="text-sm text-muted-foreground">
                                 <strong>Skills:</strong> Generative AI · Large Language Models
                             </p>
-                            <Link 
-                                href="#" 
-                                className="inline-flex items-center gap-2 text-sm text-primary hover:underline"
-                                title="Add credential URL"
-                            >
-                                View credential <ExternalLink className="w-4 h-4" />
-                            </Link>
                         </CardContent>
                     </Card>
                     </motion.div>
@@ -371,13 +364,6 @@ export default function AboutPage() {
                             <p className="text-sm text-muted-foreground">
                                 <strong>Skills:</strong> Artificial Intelligence (AI) · Large Language Models (LLM) · Prompt Engineering
                             </p>
-                            <Link 
-                                href="#" 
-                                className="inline-flex items-center gap-2 text-sm text-primary hover:underline"
-                                title="Add credential URL"
-                            >
-                                View credential <ExternalLink className="w-4 h-4" />
-                            </Link>
                         </CardContent>
                     </Card>
                     </motion.div>
@@ -410,13 +396,6 @@ export default function AboutPage() {
                             <p className="text-sm text-muted-foreground">
                                 <strong>Skills:</strong> Flask · Web Development · REST APIs · Python · Back-End Web Development
                             </p>
-                            <Link 
-                                href="#" 
-                                className="inline-flex items-center gap-2 text-sm text-primary hover:underline"
-                                title="Add credential URL"
-                            >
-                                View credential <ExternalLink className="w-4 h-4" />
-                            </Link>
                         </CardContent>
                     </Card>
                     </motion.div>
@@ -449,13 +428,6 @@ export default function AboutPage() {
                             <p className="text-sm text-muted-foreground">
                                 <strong>Skills:</strong> SQL · Relational Databases · Data Modeling · Database Design
                             </p>
-                            <Link 
-                                href="#" 
-                                className="inline-flex items-center gap-2 text-sm text-primary hover:underline"
-                                title="Add credential URL"
-                            >
-                                View credential <ExternalLink className="w-4 h-4" />
-                            </Link>
                         </CardContent>
                     </Card>
                     </motion.div>

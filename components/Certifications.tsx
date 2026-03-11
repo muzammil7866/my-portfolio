@@ -1,7 +1,5 @@
 import React from "react";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
-import Link from "next/link";
-import { ExternalLink } from "lucide-react";
 
 type Cert = {
   id: string;
@@ -9,7 +7,6 @@ type Cert = {
   issuer: string;
   issued?: string;
   skills?: string[];
-  url?: string; // credential link to be added later by user
 };
 
 const sampleCerts: Cert[] = [
@@ -19,7 +16,6 @@ const sampleCerts: Cert[] = [
     issuer: "Duke University",
     issued: "Dec 2024",
     skills: ["Generative AI", "LLMs"],
-    url: "#",
   },
   {
     id: "c2",
@@ -27,7 +23,6 @@ const sampleCerts: Cert[] = [
     issuer: "freeCodeCamp",
     issued: "Apr 2024",
     skills: ["Prompt Engineering", "LLMs"],
-    url: "#",
   },
   {
     id: "c3",
@@ -35,7 +30,6 @@ const sampleCerts: Cert[] = [
     issuer: "Coursera",
     issued: "Aug 2023",
     skills: ["Flask", "REST APIs"],
-    url: "#",
   },
 ];
 
@@ -56,11 +50,6 @@ export function Certifications({ items = sampleCerts }: { items?: Cert[] }) {
                     <div>
                       <div className="font-semibold text-foreground">{c.title}</div>
                       <div className="text-sm text-muted-foreground">{c.issuer} • {c.issued}</div>
-                    </div>
-                    <div>
-                      <Link href={c.url ?? "#"} target="_blank" className="inline-flex items-center gap-2 text-sm text-primary hover:underline">
-                        View credential <ExternalLink className="w-4 h-4" />
-                      </Link>
                     </div>
                   </div>
 
