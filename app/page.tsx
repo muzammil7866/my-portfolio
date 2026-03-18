@@ -3,8 +3,9 @@
 import { HeroSection } from "@/components/HeroSection";
 import { SkillsSection } from "@/components/SkillsSection";
 import { ProjectSlider } from "@/components/ProjectSlider";
+import { TestimonialsSection } from "@/components/TestimonialsSection";
 import { SectionHeader } from "@/components/SectionHeader";
-import { PROJECTS } from "@/lib/constants";
+import { PROJECTS, TESTIMONIALS } from "@/lib/constants";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
@@ -47,6 +48,8 @@ export default function Home() {
           </Button>
         </div>
       </section>
+
+      <TestimonialsSection testimonials={TESTIMONIALS} />
 
       <section className="py-24 bg-secondary/30">
         <div className="container px-4 mx-auto text-center">

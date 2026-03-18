@@ -86,3 +86,46 @@ export const PROJECTS = [
         isRefactoring: true,
     },
 ];
+
+export const TESTIMONIALS = [
+    {
+        rank: 1,
+        title: "Modern AI Stack Proof",
+        quote:
+            "I worked with Muzammil on a weather-based clothing and activities recommendation system during our Applied Recommendation Systems course. He excelled in fine-tuning multiple LLMs, integrating RAG, and implementing FAISS for efficient search. Muzammil's technical skills and collaborative approach make him highly suited for roles in AI and machine learning.",
+        author: "Project Collaborator",
+        role: "Applied Recommendation Systems",
+    },
+    {
+        rank: 2,
+        title: "Hard Metric Endorsement",
+        quote:
+            "I have taught a course on Object Oriented Programming to Muzammil. Through the course, I realized that his understanding extends beyond theory, as he consistently integrates OOP into practical problem-solving and software development tasks, showcasing both clarity in design and efficiency in execution. Some of his key qualities are diligence, focus, and commitment. I can safely place him in the bracket of the top 10% students of my teaching span. I confidently recommend him for computing jobs in general with good wishes to a brighter future.",
+        author: "Hafiz Saud Arshad, Ph.D. Researcher",
+        role: "FAST-NUCES",
+    },
+    {
+        rank: 3,
+        title: "Real-World Execution Review",
+        quote:
+            "Working with Muzammil was an absolute pleasure. He's a true professional with deep technical expertise. I needed a highly specific assembly language project done, and Muzammil not only delivered exactly what I wanted but also provided valuable insights to improve the final product. The communication throughout the project was clean and he was quick to respond to any questions I had.",
+        author: "Independent Client",
+        role: "Technical Consulting",
+    },
+    {
+        rank: 4,
+        title: "Framework Mastery and HoD Backing",
+        quote:
+            "Muzammil has built a strong profile in Programming for AI, working with libraries and frameworks such as NumPy, Pandas, scikit-learn, TensorFlow, and OpenCV. He has applied these tools in tasks ranging from data analysis and web scraping to building and training machine learning models, showing both versatility and depth. His ability to bridge programming with applied AI solutions highlights his potential as a capable and impactful AI Engineer.",
+        author: "Dr. Muhammad Fayyaz, Associate Professor and HoD (CS)",
+        role: "FAST-NUCES",
+    },
+    {
+        rank: 5,
+        title: "Core Foundation Endorsement",
+        quote:
+            "Muzammil has developed a solid foundation in Mathematics for Artificial Intelligence, mastering key areas such as linear algebra, probability, statistics, and calculus that are essential for modern AI. He complements this mathematical strength with strong programming skills and the ability to apply advanced AI concepts in practice. His capability to connect theory with implementation allows him to design, train, and optimize intelligent systems with both precision and efficiency. This balance of analytical rigor and practical problem-solving highlights his potential to excel as an AI Engineer in both research and industry.",
+        author: "Dr. Mushtaq Ahmad, Associate Professor and HoD",
+        role: "FAST-NUCES",
+    },
+];
