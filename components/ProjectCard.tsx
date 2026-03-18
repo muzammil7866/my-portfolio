@@ -25,6 +25,7 @@ interface Project {
     githubUrl: string;
     demoUrl?: string;
     image?: string; // Optional image
+    isRefactoring?: boolean; // Mark if project is under refactoring
 }
 
 interface ProjectCardProps {
@@ -49,7 +50,14 @@ export function ProjectCard({ project, className }: ProjectCardProps) {
                 )}
             </div>
             <CardHeader>
-                <CardTitle>{project.title}</CardTitle>
+                <div className="flex items-start justify-between gap-2">
+                    <CardTitle>{project.title}</CardTitle>
+                    {project.isRefactoring && (
+                        <span className="inline-flex items-center rounded-full px-3 py-1 text-xs font-bold bg-yellow-500/20 text-yellow-700 border border-yellow-500/50 whitespace-nowrap flex-shrink-0">
+                            🔧 Refactoring
+                        </span>
+                    )}
+                </div>
                 <div className="flex flex-wrap gap-2 mt-2">
                     {project.tags.map((tag) => (
                         <span

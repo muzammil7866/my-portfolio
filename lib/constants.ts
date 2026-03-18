@@ -53,6 +53,7 @@ export const PROJECTS = [
         githubUrl: "https://github.com/muzammil7866",
         demoUrl: "#", // No live demo URL provided
         image: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=600&auto=format&fit=crop", // Cyber/Security placeholder
+        isRefactoring: true,
     },
     {
         title: "End-to-End MLOps Pipeline",
@@ -62,6 +63,7 @@ export const PROJECTS = [
         githubUrl: "https://github.com/muzammil7866",
         demoUrl: "#",
         image: "https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?q=80&w=600&auto=format&fit=crop", // Code/Tech placeholder
+        isRefactoring: true,
     },
     {
         title: "Context-Aware Multimodal Recommender",
@@ -71,6 +73,7 @@ export const PROJECTS = [
         githubUrl: "https://github.com/muzammil7866",
         demoUrl: "#",
         image: "https://images.unsplash.com/photo-1518932945647-7a1c969f8be2?q=80&w=600&auto=format&fit=crop", // AI placeholder
+        isRefactoring: true,
     },
     {
         title: "Multimodal Cancer Diagnostic System",
@@ -80,5 +83,6 @@ export const PROJECTS = [
         githubUrl: "https://github.com/muzammil7866",
         demoUrl: "#",
         image: "https://images.unsplash.com/photo-1576086213369-97a306d36557?q=80&w=600&auto=format&fit=crop", // Medical placeholder
+        isRefactoring: true,
     },
 ];
